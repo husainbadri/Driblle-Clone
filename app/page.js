@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center overflow-hidden">
@@ -16,7 +17,7 @@ export default function Home() {
       </div>
       <div className="text-center ">
         <input
-          className="lg:w-[24em] w-[16em] rounded-full px-8 border-b-2 py-4 bg-slate-100"
+          className="lg:w-[28em] w-[16em] rounded-full px-12 border-b-2 py-4 bg-slate-100"
           type="search"
           placeholder="what are you looking for?"
         />
@@ -109,11 +110,13 @@ export default function Home() {
         </div>
       </div>
 
+<Link href={"/signup"}>
       <div className="flex justify-center">
-        <button className="bg-black  text-white rounded-full py-3 w-[200] ">
+        <button className="bg-black  text-white rounded-full py-3 w-[200] hover:bg-slate-600 ">
           Sign up to continue
         </button>
       </div>
+      </Link>
 
       <nav className="w-full  lg:flex-row flex-col bg-white py-6 px-10  flex justify-between   ">
         <h2 className=" flex justify-center text-xl font-bold py-4 text-black">
@@ -148,12 +151,19 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      <nav className="w-full bg-slate-600 lg:py-6 py-0 lg:px-10 px-0     ">
+      <nav className="w-full  lg:py-6 py-0 lg:px-10 px-0  flex justify-between   ">
         <div className="flex  justify-center lg:flex-row flex-col lg:gap-4 items-center ">
           <p>@2024dribble</p>
-          <p>Store</p>
-          <p>About</p>
-          <p>Contact</p>
+          <p>Terms</p>
+          <p>Privacy</p>
+          <p>Cookies</p>
+        </div>
+        <div className="flex  justify-center lg:flex-row flex-col lg:gap-4 items-center ">
+          <p>job</p>
+          <p>Designers</p>
+          <p>Places</p>
+          <p>Tages</p>
+          <p>Resourses</p>
         </div>
       </nav>
     </div>
